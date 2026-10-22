@@ -102,7 +102,7 @@ nav.links a:hover{color:var(--on-night)}
 .price{display:flex;align-items:baseline;gap:12px;font-variant-numeric:tabular-nums}
 .price .now{font-family:var(--f-display);font-size:48px;line-height:1}
 .price s{color:var(--on-night-soft);font-size:18px}
-.price .save{font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;background:var(--amber);color:var(--amber-ink);padding:6px 9px;border-radius:999px}
+.price .save{white-space:nowrap;font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;background:var(--amber);color:var(--amber-ink);padding:6px 9px;border-radius:999px}
 .includes{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:16px}
 .includes li{display:flex;gap:10px}
 .includes li::before{content:"+";font-family:var(--f-mono);color:var(--amber)}
@@ -186,6 +186,8 @@ footer .wrap{padding-block:48px;display:grid;gap:22px}
 .btn.soon{background:transparent!important;border:1.5px dashed var(--ink-soft)!important;color:var(--ink-soft)!important;cursor:default;transform:none}
 .fine{font-size:13px;color:var(--ink-soft);line-height:1.5}
 .night .fine{color:var(--on-night-soft)}
+@media (max-width:520px){.top .btn .lg{display:none}.covers{gap:14px;padding:28px 16px;min-height:0}.book.one,.book.two{transform:none;width:44%}.book .b-title{font-size:19px}.logo{font-size:19px}}
+@media (min-width:521px){.top .btn .sm{display:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -199,7 +201,7 @@ footer .wrap{padding-block:48px;display:grid;gap:22px}
 <a href="#watch">Watch</a>
 <a href="#about">About</a>
 </nav>
-<a class="btn btn-amber" href="#shop">Shop the guides</a>
+<a class="btn btn-amber" href="#shop"><span class="lg">Shop the guides</span><span class="sm">Shop</span></a>
 </div>
 </header>
 <div class="notice" role="note"><div class="wrap"><b>Education only.</b> The Untold Mind shares educational content and simple tools. It is not medical or legal advice. Always talk with your doctor, insurer, or attorney about your situation.</div></div>
